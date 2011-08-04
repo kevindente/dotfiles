@@ -1,0 +1,9 @@
+[submodule "vimfiles\\bundle\\vim-javascript"]
+	path = vimfiles\\bundle\\vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vimfiles\\bundle\\vim-jade"]
+	path = vimfiles\\bundle\\vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vimfiles\\bundle\\snipmate"]
+	path = vimfiles\\bundle\\snipmate
+	url = https://github.com/msanders/snipmate.vim.git
