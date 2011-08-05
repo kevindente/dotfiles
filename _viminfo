@@ -8,12 +8,16 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/unn
+~MSle0~/call
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:w
+:w!
+:bd
+:Gstatus
 :help snipmate.txt
 :close
 :NERDTree
@@ -23,7 +27,6 @@ $
 :helptags
 :e test.js
 :scriptnames
-:w!
 :e $MYVIMRC
 :help runtimepath
 :wq
@@ -31,13 +34,17 @@ $
 :e
 :e $myvimrc
 :browse
-:close!
-:q!
-:echo &rtp
 
 # Search String History (newest to oldest):
+?/call
+? \<call\>
 ? \Vfor\%#
 ?/unn
+?/df
+?/ads
+?/ExtractSnips
+?/ExtractSn
+?/extractsnips
 
 # Expression History (newest to oldest):
 
@@ -46,7 +53,9 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"1	CHAR	0
+"1	LINE	0
+	call snipmate#ExtractSnips("c:\vimfiles\vimfiles\bundle\snipmate-nodejs", "javascript")
+"2	CHAR	0
 	" Set options and add mapping such that Vim behaves a lot like MS-Windows
 	"
 	" Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -97,33 +106,38 @@ $
 	
 	imap <S-Insert>		<C-V>
 	vmap <S-Insert>		<C-V>
-"2	CHAR	0
-	djfsjd
 "3	CHAR	0
+	djfsjd
+"4	CHAR	0
 	y
-"4	LINE	0
+"5	LINE	0
 	y
 	<Up>
-"5	CHAR	0
-	jjjsdf
 "6	CHAR	0
 	jjjsdf
+"7	CHAR	0
+	jjjsdf
 ""-	CHAR	0
-	count
+	#
 
 # File marks:
-'0  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
-'1  1  26  ~\test.js
-'2  1  2  ~\test.c
-'3  5  1  ~\test.js
-'4  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
-'5  5  0  ~\_vimrc
-'6  6  0  ~\_vimrc
-'7  106  0  ~\mswin.vim
-'8  1  0  ~\_vimrc
-'9  1  2  ~\_vimrc
+'0  1  0  ~\vimfiles\bundle\snipmate-nodejs\snippets\javascript\mongoose.model.snippet
+'1  9  0  ~\_vimrc
+'2  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+'3  1  26  ~\test.js
+'4  1  2  ~\test.c
+'5  5  1  ~\test.js
+'6  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+'7  6  0  ~\_vimrc
+'8  106  0  ~\mswin.vim
+'9  1  0  ~\_vimrc
 
 # Jumplist (newest first):
+-'  1  0  ~\vimfiles\bundle\snipmate-nodejs\snippets\javascript\mongoose.model.snippet
+-'  9  0  ~\_vimrc
+-'  4  0  ~\_vimrc
+-'  5  0  ~\_vimrc
+-'  1  0  ~\_vimrc
 -'  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
 -'  1  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
 -'  67  0  ~\NERD_tree_1
@@ -136,30 +150,156 @@ $
 -'  1  16  ~\test.c
 -'  5  1  ~\test.js
 -'  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
--'  6  0  ~\_vimrc
 -'  3  0  ~\_vimrc
 -'  5563  6  C:\Program Files (x86)\Vim\vim73\doc\options.txt
 -'  1  0  C:\Program Files (x86)\Vim\vim73\doc\options.txt
--'  5  0  ~\_vimrc
+-'  6  0  ~\_vimrc
 -'  2  0  ~\_vimrc
--'  1  0  ~\_vimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
 -'  2  0  ~\_gvimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
--'  72  0  ~\_vimrc
--'  71  0  ~\_vimrc
--'  75  2  ~\_vimrc
+-'  75  0  ~\_vimrc
 -'  74  0  ~\_vimrc
--'  70  41  ~\_vimrc
--'  69  18  ~\_vimrc
--'  68  0  ~\_vimrc
--'  73  2  ~\_vimrc
+-'  78  2  ~\_vimrc
+-'  77  0  ~\_vimrc
+-'  73  41  ~\_vimrc
+-'  72  18  ~\_vimrc
+-'  71  0  ~\_vimrc
+-'  76  2  ~\_vimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
+-'  5  0  ~\.gitmodules
+-'  1  0  ~\.gitmodules
+-'  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  1  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  67  0  ~\NERD_tree_1
+-'  85  0  ~\NERD_tree_1
+-'  1  0  ~\NERD_tree_1
+-'  199  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\_gvimrc
+-'  1  26  ~\test.js
+-'  1  16  ~\test.c
+-'  5  1  ~\test.js
+-'  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+-'  5563  6  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  1  0  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  106  0  ~\mswin.vim
+-'  1  0  ~\mswin.vim
+-'  2  0  ~\_gvimrc
+-'  106  0  ~\mswin.vim
+-'  1  0  ~\mswin.vim
+-'  106  0  ~\mswin.vim
+-'  1  0  ~\mswin.vim
+-'  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  1  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  67  0  ~\NERD_tree_1
+-'  85  0  ~\NERD_tree_1
+-'  1  0  ~\NERD_tree_1
+-'  199  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\_gvimrc
+-'  1  26  ~\test.js
+-'  1  16  ~\test.c
+-'  5  1  ~\test.js
+-'  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+-'  9  0  ~\_vimrc
+-'  4  0  ~\_vimrc
+-'  5  0  ~\_vimrc
+-'  1  0  ~\_vimrc
+-'  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  1  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  67  0  ~\NERD_tree_1
+-'  85  0  ~\NERD_tree_1
+-'  1  0  ~\NERD_tree_1
+-'  199  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\_gvimrc
+-'  1  26  ~\test.js
+-'  1  16  ~\test.c
+-'  5  1  ~\test.js
+-'  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+-'  3  0  ~\_vimrc
+-'  5563  6  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  1  0  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  6  0  ~\_vimrc
+-'  2  0  ~\_vimrc
+-'  106  0  ~\mswin.vim
+-'  1  0  ~\mswin.vim
+-'  2  0  ~\_gvimrc
+-'  106  0  ~\mswin.vim
+-'  1  0  ~\mswin.vim
+-'  75  0  ~\_vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~\vimfiles\bundle\snipmate-nodejs\snippets\javascript\mongoose.model.snippet
+	"	1	0
+
+> ~\_vimrc
+	"	9	0
+	^	4	1
+	.	7	0
+	+	1	42
+	+	1	0
+	+	1	0
+	+	1	4
+	+	1	2
+	+	1	21
+	+	1	0
+	+	11	0
+	+	1	28
+	+	10	0
+	+	9	0
+	+	2	22
+	+	6	0
+	+	5	26
+	+	5	0
+	+	4	1
+	+	7	0
+
+> ~\vimfiles\bundle\snipmate\after\plugin\snipMate.vim
+	"	5	0
+
+> ~\vimfiles\bundle\snipmate\after\plugin\NERD_tree_1
+	"	11	10
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~\vimfiles\bundle\snipmate\autoload\snipMate.vim
+	"	24	1
+
+> ~\vimfiles\bundle\snipmate\plugin\snipMate.vim
+	"	67	28
+
+> ~\.git\index
+	"	1	0
+
+> ~\.gitmodules
+	"	5	0
+
+> ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+	"	185	0
+
+> C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\NERD_tree_1
+	"	110	7
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
 > ~\_gvimrc
 	"	1	0
@@ -182,27 +322,6 @@ $
 	"	8	0
 	.	1	0
 	+	1	0
-
-> ~\_vimrc
-	"	1	0
-	^	4	0
-	.	4	0
-	+	1	42
-	+	1	0
-	+	1	0
-	+	1	4
-	+	1	2
-	+	1	21
-	+	1	0
-	+	7	0
-	+	1	28
-	+	6	0
-	+	5	0
-	+	2	22
-	+	4	0
-
-> ~\vimfiles\bundle\snipmate\doc\snipMate.txt
-	"	201	0
 
 > ~\test.c
 	"	3	0
