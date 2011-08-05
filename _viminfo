@@ -10,29 +10,33 @@
 # Last Search Pattern:
 ~MSle0~/unn
 
+# Last Substitute String:
+$
+
 # Command Line History (newest to oldest):
+:help snipmate.txt
+:close
+:NERDTree
+:nerdtree
+:help NERD_Tree.txt
+:helptags NERD_Tree
+:helptags
+:e test.js
+:scriptnames
+:w!
+:e $MYVIMRC
+:help runtimepath
 :wq
 :browse e
 :e
 :e $myvimrc
 :browse
-:e $MYVIMRC
 :close!
 :q!
 :echo &rtp
-:echo $rtp
-:call pathogen#runtime_append_all_bundles()
-:pathogen#runtime_append_all_bundles()
-:cl
-:close
-:e $MYVIMRC!
-:e c:\vimfiles\_vimrc
-:w!
-:echo $MYGVIMRC
-:echo $MYVIMRC
-:set gfn
 
 # Search String History (newest to oldest):
+? \Vfor\%#
 ?/unn
 
 # Expression History (newest to oldest):
@@ -104,120 +108,85 @@
 	jjjsdf
 "6	CHAR	0
 	jjjsdf
-"-	CHAR	0
-	o
+""-	CHAR	0
+	count
 
 # File marks:
-'0  1  0  ~\_vimrc
-'1  1  0  ~\_viminfo
-'2  3  0  ~\_vimrc
-'3  4  0  ~\_vimrc
-'4  106  0  ~\mswin.vim
-'5  1  2  ~\_vimrc
-'6  1  14  ~\_gvimrc
-'7  2  0  ~\_gvimrc
+'0  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+'1  1  26  ~\test.js
+'2  1  2  ~\test.c
+'3  5  1  ~\test.js
+'4  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+'5  5  0  ~\_vimrc
+'6  6  0  ~\_vimrc
+'7  106  0  ~\mswin.vim
+'8  1  0  ~\_vimrc
+'9  1  2  ~\_vimrc
 
 # Jumplist (newest first):
--'  1  0  ~\_vimrc
--'  1  0  ~\_viminfo
+-'  201  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  1  0  ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+-'  67  0  ~\NERD_tree_1
+-'  85  0  ~\NERD_tree_1
+-'  1  0  ~\NERD_tree_1
+-'  199  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+-'  1  0  ~\_gvimrc
+-'  1  26  ~\test.js
+-'  1  16  ~\test.c
+-'  5  1  ~\test.js
+-'  1  0  C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+-'  6  0  ~\_vimrc
 -'  3  0  ~\_vimrc
+-'  5563  6  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  1  0  C:\Program Files (x86)\Vim\vim73\doc\options.txt
+-'  5  0  ~\_vimrc
 -'  2  0  ~\_vimrc
--'  4  0  ~\_vimrc
+-'  1  0  ~\_vimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
 -'  2  0  ~\_gvimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
--'  70  0  ~\_vimrc
--'  69  0  ~\_vimrc
--'  73  2  ~\_vimrc
 -'  72  0  ~\_vimrc
--'  68  41  ~\_vimrc
--'  67  18  ~\_vimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  66  0  ~\_vimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  71  2  ~\_vimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
+-'  71  0  ~\_vimrc
+-'  75  2  ~\_vimrc
+-'  74  0  ~\_vimrc
+-'  70  41  ~\_vimrc
+-'  69  18  ~\_vimrc
+-'  68  0  ~\_vimrc
+-'  73  2  ~\_vimrc
 -'  106  0  ~\mswin.vim
 -'  1  0  ~\mswin.vim
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  2  0  ~\_gvimrc
--'  1  14  ~\_gvimrc
--'  106  0  ~\mswin.vim
--'  1  0  ~\mswin.vim
--'  1  14  ~\_gvimrc
 
 # History of marks within files (newest to oldest):
 
+> ~\_gvimrc
+	"	1	0
+	^	1	0
+	.	1	14
+	+	1	30
+	+	2	0
+	+	1	14
+
+> ~\vimfiles\bundle\nerdtree\doc\NERD_tree.txt
+	"	199	0
+
+> ~\NERD_tree_1
+	"	67	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~\NERD_tree_2
+	"	8	0
+	.	1	0
+	+	1	0
+
 > ~\_vimrc
 	"	1	0
-	^	3	0
-	.	3	0
+	^	4	0
+	.	4	0
 	+	1	42
 	+	1	0
 	+	1	0
@@ -225,21 +194,45 @@
 	+	1	2
 	+	1	21
 	+	1	0
-	+	5	0
+	+	7	0
 	+	1	28
+	+	6	0
+	+	5	0
+	+	2	22
 	+	4	0
-	+	3	0
+
+> ~\vimfiles\bundle\snipmate\doc\snipMate.txt
+	"	201	0
+
+> ~\test.c
+	"	3	0
+	^	1	17
+	.	1	16
+	+	1	0
+	+	2	0
+	+	1	16
+
+> ~\test.js
+	"	1	26
+	^	1	20
+	.	2	0
+	+	1	13
+	+	6	0
+	+	4	12
+	+	5	0
+	+	1	0
+	+	2	0
+
+> C:\Program Files (x86)\Vim\vim73\doc\options.txt
+	"	5563	6
+
+> C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Vim 7.3\test.js
+	"	1	0
+	.	2	1
+	+	2	1
 
 > ~\_viminfo
 	"	1	0
 
 > ~\mswin.vim
 	"	106	0
-
-> ~\_gvimrc
-	"	1	14
-	^	1	15
-	.	1	14
-	+	1	30
-	+	2	0
-	+	1	14
