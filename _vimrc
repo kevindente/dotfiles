@@ -8,9 +8,8 @@ endif
 "store lots of :cmdline history
 set history=1000
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
-" call snipmate#ExtractSnips("c:\dotfiles\vimfiles\bundle\snipmate-nodejs", "javascript")
 filetype plugin indent on
 
 "search options
@@ -26,4 +25,5 @@ set softtabstop=2
 set expandtab
 set autoindent
 	
-
+"Paste settings
+set clipboard=unnamed  "yank/paste to windows clipboard by default

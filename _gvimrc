@@ -1,2 +1,6 @@
-set gfn=Consolas:h16:cANSI
+if has("gui_gtk2")
+  set guifont=Inconsolata\ 12
+elseif has("gui_win32")
+  set guifont=Consolas:h16:cANSI
+endif
 

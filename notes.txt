@@ -1,0 +1,9 @@
+VIM plugins to try:
+https://github.com/ervandew/supertab/blob/master/doc/supertab.txt
+https://github.com/scrooloose/nerdcommenter
+https://github.com/docunext/closetag.vim
+https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
+https://github.com/Raimondi/delimitMate
+
+VIM tips:
+http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
