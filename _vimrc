@@ -1,6 +1,28 @@
 " don't try to play nice with vi
 set nocompatible
 
+" vundle setup
+filetype off
+set rtp+=$HOME/vimfiles/bundle/vundle/
+
+if has('win32')
+   call vundle#rc('$HOME/vimfiles/bundle/')
+else
+   call vundle#rc('')
+endif
+
+"Vundle packages
+
+" let Vundle manage Vundle
+ " required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'scrooloose/nerdtree'
+
 if has('win32')
     source $VIMRUNTIME/mswin.vim
 endif
@@ -8,8 +30,6 @@ endif
 "store lots of :cmdline history
 set history=1000
 
-call pathogen#infect()
-call pathogen#helptags()
 filetype plugin indent on
 
 "search options

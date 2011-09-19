@@ -1,16 +1,4 @@
-[submodule "vimfiles/bundle/vim-javascript"]
-	path = vimfiles/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vimfiles/bundle/vim-jade"]
-	path = vimfiles/bundle/vim-jade
-	url = https://github.com/digitaltoad/vim-jade.git
-[submodule "vimfiles/bundle/snipmate"]
-	path = vimfiles/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
-[submodule "vimfiles/bundle/nerdtree"]
-	path = vimfiles/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vimfiles/bundle/vim-fugitive"]
-	path = vimfiles/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vimfiles/bundle/vundle"]
+	path = vimfiles/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
 
