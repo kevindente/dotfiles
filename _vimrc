@@ -7,7 +7,7 @@ if has('win32')
    set rtp+=$HOME/vimfiles/bundle/vundle/
    call vundle#rc('$HOME/vimfiles/bundle/')
 else
-   set rtp+=$HOME/.vim/bundle/vundle/
+   set rtp+=$HOME/.vim/vimfiles/bundle/vundle/
    call vundle#rc('$HOME/.vim/vimfiles/bundle')
 endif
 
