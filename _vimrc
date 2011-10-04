@@ -8,7 +8,7 @@ set rtp+=$HOME/vimfiles/bundle/vundle/
 if has('win32')
    call vundle#rc('$HOME/vimfiles/bundle/')
 else
-   call vundle#rc('')
+   call vundle#rc('$HOME/.vim/vimfiles/bundle')
 endif
 
 "Vundle packages
@@ -22,6 +22,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'scrooloose/nerdtree'
+Bundle 'wavded/vim-stylus'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
