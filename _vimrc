@@ -23,6 +23,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
+Bundle 'vim-scripts/Jasmine-snippets-for-snipMate'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -37,7 +38,7 @@ filetype plugin indent on
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
-
+set ruler
 set nowrap
 
 "indent settings
@@ -48,3 +49,8 @@ set autoindent
 	
 "Paste settings
 set clipboard=unnamed  "yank/paste to windows clipboard by default
+
+"turn on syntax highlighting
+syntax on
+
+
