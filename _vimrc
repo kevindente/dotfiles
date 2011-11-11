@@ -24,6 +24,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
 Bundle 'vim-scripts/Jasmine-snippets-for-snipMate'
+Bundle 'xolox/vim-session'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
