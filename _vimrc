@@ -25,6 +25,12 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
 Bundle 'vim-scripts/Jasmine-snippets-for-snipMate'
 Bundle 'xolox/vim-session'
+Bundle 'vim-scripts/tComment'
+Bundle 'vim-scripts/L9'
+" Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'kien/ctrlp.vim'
+Bundle 'walm/jshint.vim'
+Bundle 'vim-scripts/ZoomWin'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -41,6 +47,7 @@ set hlsearch    "hilight searches by default
 
 set ruler
 set nowrap
+set ignorecase  "case insensitive search
 
 "indent settings
 set shiftwidth=2
@@ -54,4 +61,12 @@ set clipboard=unnamed  "yank/paste to windows clipboard by default
 "turn on syntax highlighting
 syntax on
 
+set wildignore+=*/node_modules/*
 
+if has("win32") || has("win64")
+  set backupdir=$TMP
+  set directory=$TMP
+else
+  set backupdir=/tmp
+  set directory=/tmp
+end
