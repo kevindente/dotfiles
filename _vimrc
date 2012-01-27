@@ -70,3 +70,7 @@ else
   set backupdir=/tmp
   set directory=/tmp
 end
+
+if has("gui_macvim")
+  inoremap <D-s> <ESC>:w<CR>i  "support cmd-s save in insertmode
+endif
