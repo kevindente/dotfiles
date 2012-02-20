@@ -18,12 +18,19 @@ endif
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
+" Bundle 'msanders/snipmate.vim'
+
+" Needed for garbas snipmate
+Bundle 'MarcWeber/vim-addon-mw-utils' 
+Bundle 'tomtom/tlib_vim' 
+Bundle 'snipmate-snippets'
+
+Bundle 'garbas/vim-snipmate'
+
 Bundle 'pangloss/vim-javascript'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
-Bundle 'vim-scripts/Jasmine-snippets-for-snipMate'
 Bundle 'xolox/vim-session'
 Bundle 'vim-scripts/tComment'
 Bundle 'vim-scripts/L9'
@@ -31,6 +38,9 @@ Bundle 'vim-scripts/L9'
 Bundle 'kien/ctrlp.vim'
 Bundle 'walm/jshint.vim'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'sickill/vim-pasta'
+Bundle 'tpope/vim-surround'
+Bundle 'bkad/CamelCaseMotion'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -39,7 +49,12 @@ endif
 "store lots of :cmdline history
 set history=1000
 
+let mapleader = ","
+
 filetype plugin indent on
+
+" show line numbers
+set number
 
 "search options
 set incsearch   "find the next match as we type the search
@@ -73,4 +88,9 @@ end
 
 if has("gui_macvim")
   inoremap <D-s> <ESC>:w<CR>i  "support cmd-s save in insertmode
+  nnoremap <Leader>p :!open % <CR><CR>
+  nnoremap <Leader>d :maca openFileBrowser:<CR>
 endif
+
+nnoremap <Leader>h :JSHint<CR>
+
