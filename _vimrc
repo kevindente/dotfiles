@@ -11,6 +11,11 @@ else
    call vundle#rc('$HOME/.vim/vimfiles/bundle')
 endif
 
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+\ }
+
+
 "Vundle packages
 
 " let Vundle manage Vundle
@@ -41,6 +46,9 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-surround'
 Bundle 'bkad/CamelCaseMotion'
+Bundle 'vim-scripts/EasyGrep'
+" Bundle 'int3/vim-taglist-plus'
+Bundle 'majutsushi/tagbar'
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -76,7 +84,10 @@ set clipboard=unnamed  "yank/paste to windows clipboard by default
 "turn on syntax highlighting
 syntax on
 
-set wildignore+=*/node_modules/*
+" set wildignore+=*/node_modules/*
+
+let g:ctrlp_custom_ignore = 'node_modules\|.git'
+let g:ctrlp_switch_buffer = 1
 
 if has("win32") || has("win64")
   set backupdir=$TMP
@@ -93,4 +104,9 @@ if has("gui_macvim")
 endif
 
 nnoremap <Leader>h :JSHint<CR>
+
+" inoremap <C-P> <ESC>:<C-U>CtrlP<CR>
+
+" nnoremap 0 ^ 
+" nnoremap ^ 0 
 

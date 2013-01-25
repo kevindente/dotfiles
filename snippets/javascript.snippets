@@ -1,0 +1,62 @@
+snippet bbview
+	var ${1} =  Backbone.View.extend({
+	  events: {
+	  },
+
+	  initialize: function() {
+	    _.bindAll(this);
+	    this.template = $("");
+	  },
+
+	  render: function() {
+		this.$el.html(this.template.render(this.model));
+	    return this;
+	  }
+	});
+
+snippet bbmodel
+	var ${1} = Backbone.Model.extend({
+	  initialize: function() {
+	  },
+
+	  defaults: {
+	  }
+	});
+	  
+snippet funci
+	function(${1}) {
+	  ${2}
+	}
+
+snippet funcit
+	function(${1}) {
+	  ${2}
+	});
+
+snippet funcitb
+	function(${1}) {
+	  ${2}
+	}.bind(this));
+
+snippet funcj
+	${1}: function(${2}) {
+	  ${3}
+	},
+
+snippet describe
+	describe("${1}", function() {
+	  ${2}
+	});
+
+snippet it
+	it("${1}", function() {
+	  ${2}
+	});
+
+snippet beforeEach
+	beforeEach(function() {
+	  ${1}
+	});
+
+snippet expect
+	expect(${1}).to.${2}
