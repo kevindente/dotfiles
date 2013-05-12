@@ -49,6 +49,8 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'vim-scripts/EasyGrep'
 " Bundle 'int3/vim-taglist-plus'
 Bundle 'majutsushi/tagbar'
+Bundle "CSSMinister" 
+Bundle "scrooloose/syntastic" 
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -78,6 +80,10 @@ set softtabstop=2
 set expandtab
 set autoindent
 	
+"split settings
+set splitright
+set splitbelow
+
 "Paste settings
 set clipboard=unnamed  "yank/paste to windows clipboard by default
 
