@@ -44,19 +44,74 @@ snippet funcj
 	},
 
 snippet describe
-	describe("${1}", function() {
-	  ${2}
+	describe('${1}', function() {
+	    ${2}
 	});
 
 snippet it
-	it("${1}", function() {
+	it('${1}', function() {
 	  ${2}
 	});
 
+snippet ita
+	it('${1}', function(done) {
+	    ${2}
+	    done();
+	});
+
 snippet beforeEach
-	beforeEach(function() {
-	  ${1}
+	beforeEach(function(${1}) {
+	    ${2}
 	});
 
 snippet expect
 	expect(${1}).to.${2}
+
+snippet forEach
+	forEach(function(${1:item}) {
+		${2}
+	});
+
+snippet clog
+	console.log(${1});
+
+snippet clogs
+	console.log('${1}');
+
+
+snippet waterfall
+	async.waterfall([
+		function(callback) {
+			${1}
+		},
+		function(callback) {
+		}],
+		function(err) {
+		});
+
+
+snippet require
+	var ${1} = require('${2}');
+
+
+
+snippet series
+	async.series([
+		function(callback) {
+			${1}
+		},
+		function(callback) {
+		}],
+		function(err) {
+		});
+
+snippet auto
+	async.auto([
+		key1: function(callback) {
+			${1}
+		},
+		key2: function(callback) {
+		}],
+		function(err) {
+		});
+

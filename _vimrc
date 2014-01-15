@@ -1,4 +1,4 @@
-" don't try to play nice with vi
+e don't try to play nice with vi
 set nocompatible
 
 " vundle setup
@@ -36,6 +36,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
+Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'vim-scripts/tComment'
 Bundle 'vim-scripts/L9'
@@ -51,6 +52,14 @@ Bundle 'vim-scripts/EasyGrep'
 Bundle 'majutsushi/tagbar'
 Bundle "CSSMinister" 
 Bundle "scrooloose/syntastic" 
+" Bundle "mileszs/ack.vim"
+Bundle "rking/ag.vim"
+Bundle "marijnh/tern_for_vim"
+Bundle "vim-scripts/mru.vim"
+Bundle "terryma/vim-multiple-cursors"
+Bundle "Raimondi/delimitMate"
+
+" Bundle "bling/vim-airline"
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
@@ -74,9 +83,17 @@ set ruler
 set nowrap
 set ignorecase  "case insensitive search
 
+set grepprg=ag\ --nogroup\ --column
+
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
+
 "indent settings
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 	
@@ -94,6 +111,19 @@ syntax on
 
 let g:ctrlp_custom_ignore = 'node_modules\|.git'
 let g:ctrlp_switch_buffer = 1
+let g:ctrlp_max_files = 20000
+let g:ctrlp_max_depth = 100
+let g:ctrlp_max_height = 30
+
+
+"EasyGrep options
+let g:EasyGrepRecursive = 1
+let g:EasyGrepCommand = 1
+
+"NERDTree keybindings
+nnoremap <Leader>d :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
+let NERDTreeChDirMode = 2
 
 if has("win32") || has("win64")
   set backupdir=$TMP
@@ -106,13 +136,14 @@ end
 if has("gui_macvim")
   inoremap <D-s> <ESC>:w<CR>i  "support cmd-s save in insertmode
   nnoremap <Leader>p :!open % <CR><CR>
-  nnoremap <Leader>d :maca openFileBrowser:<CR>
+  " nnoremap <Leader>d :maca openFileBrowser:<CR>
 endif
 
 nnoremap <Leader>h :JSHint<CR>
 
 " inoremap <C-P> <ESC>:<C-U>CtrlP<CR>
 
-" nnoremap 0 ^ 
-" nnoremap ^ 0 
+nnoremap 0 ^ 
+nnoremap ^ 0 
 
+let g:agprg="ag -i -Q --column"
