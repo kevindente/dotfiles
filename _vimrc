@@ -1,4 +1,4 @@
-e don't try to play nice with vi
+" don't try to play nice with vi
 set nocompatible
 
 " vundle setup
@@ -145,5 +145,5 @@ nnoremap <Leader>h :JSHint<CR>
 
 nnoremap 0 ^ 
 nnoremap ^ 0 
-
+set autoread
 let g:agprg="ag -i -Q --column"
