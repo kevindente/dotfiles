@@ -1,10 +1,15 @@
 " don't try to play nice with vi
 set nocompatible
 
+set grepprg=ag\ --nogroup\ --column
+"EasyGrep options
+let g:EasyGrepRecursive = 1
+let g:EasyGrepCommand = 1
+
 " vundle setup
 filetype off
 if has('win32')
-   set rtp+=$HOME/vimfiles/bundle/vundle/
+   set rtp+=$HOME/vimfiles/;bundle/vundle/
    call vundle#rc('$HOME/vimfiles/bundle/')
 else
    set rtp+=$HOME/.vim/vimfiles/bundle/vundle/
@@ -42,6 +47,7 @@ Bundle 'vim-scripts/tComment'
 Bundle 'vim-scripts/L9'
 " Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'kien/ctrlp.vim'
+Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'walm/jshint.vim'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'sickill/vim-pasta'
@@ -58,6 +64,8 @@ Bundle "marijnh/tern_for_vim"
 Bundle "vim-scripts/mru.vim"
 Bundle "terryma/vim-multiple-cursors"
 Bundle "Raimondi/delimitMate"
+Bundle "29decibel/vim-stringify"
+Bundle "vim-scripts/PreserveNoEOL"
 
 " Bundle "bling/vim-airline"
 
@@ -83,13 +91,7 @@ set ruler
 set nowrap
 set ignorecase  "case insensitive search
 
-set grepprg=ag\ --nogroup\ --column
 
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
 
 "indent settings
 set shiftwidth=4
@@ -109,16 +111,32 @@ syntax on
 
 " set wildignore+=*/node_modules/*
 
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Use git in CtrlP for listing files in repo dirs, falling back to Ag. Lightning fast and respects .gitignore
+" let g:ctrlp_user_command = {
+"     \ 'types': {
+"       \ 1: ['.git', 'cd %s && git ls-files'],
+"       \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+"       \ },
+"     \ 'fallback': 'ag %s -l --nocolor -g ""'
+"     \ }
+
+
+" external search is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
+
+
+" use the c matcher plugin
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:100'
 let g:ctrlp_custom_ignore = 'node_modules\|.git'
 let g:ctrlp_switch_buffer = 1
 let g:ctrlp_max_files = 20000
 let g:ctrlp_max_depth = 100
-let g:ctrlp_max_height = 30
+" let g:ctrlp_max_height = 30
 
-
-"EasyGrep options
-let g:EasyGrepRecursive = 1
-let g:EasyGrepCommand = 1
 
 "NERDTree keybindings
 nnoremap <Leader>d :NERDTreeToggle<CR>
@@ -147,3 +165,7 @@ nnoremap 0 ^
 nnoremap ^ 0 
 set autoread
 let g:agprg="ag -i -Q --column"
+
+
+autocmd FileType html :PreserveNoEOL
+
