@@ -9,11 +9,9 @@ let g:EasyGrepCommand = 1
 " vundle setup
 filetype off
 if has('win32')
-   set rtp+=$HOME/vimfiles/;bundle/vundle/
-   call vundle#rc('$HOME/vimfiles/bundle/')
+   set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 else
-   set rtp+=$HOME/.vim/vimfiles/bundle/vundle/
-   call vundle#rc('$HOME/.vim/vimfiles/bundle')
+   set rtp+=$HOME/.vim/vimfiles/bundle/Vundle.vim/
 endif
 
 let g:tagbar_type_javascript = {
@@ -22,52 +20,53 @@ let g:tagbar_type_javascript = {
 
 
 "Vundle packages
+call vundle#begin()
 
 " let Vundle manage Vundle
  " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'tpope/vim-fugitive'
-" Bundle 'msanders/snipmate.vim'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'msanders/snipmate.vim'
 
 " Needed for garbas snipmate
-Bundle 'MarcWeber/vim-addon-mw-utils' 
-Bundle 'tomtom/tlib_vim' 
-Bundle 'snipmate-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils' 
+Plugin 'tomtom/tlib_vim' 
+Plugin 'snipmate-snippets'
 
-Bundle 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate'
 
-Bundle 'pangloss/vim-javascript'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'scrooloose/nerdtree'
-Bundle 'wavded/vim-stylus'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
-Bundle 'vim-scripts/tComment'
-Bundle 'vim-scripts/L9'
-" Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'kien/ctrlp.vim'
-Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'walm/jshint.vim'
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'sickill/vim-pasta'
-Bundle 'tpope/vim-surround'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'vim-scripts/EasyGrep'
-" Bundle 'int3/vim-taglist-plus'
-Bundle 'majutsushi/tagbar'
-Bundle "CSSMinister" 
-Bundle "scrooloose/syntastic" 
-" Bundle "mileszs/ack.vim"
-Bundle "rking/ag.vim"
-Bundle "marijnh/tern_for_vim"
-Bundle "vim-scripts/mru.vim"
-Bundle "terryma/vim-multiple-cursors"
-Bundle "Raimondi/delimitMate"
-Bundle "29decibel/vim-stringify"
-Bundle "vim-scripts/PreserveNoEOL"
+Plugin 'pangloss/vim-javascript'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'scrooloose/nerdtree'
+Plugin 'wavded/vim-stylus'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'vim-scripts/tComment'
+Plugin 'vim-scripts/L9'
+" Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'kien/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'walm/jshint.vim'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'sickill/vim-pasta'
+Plugin 'tpope/vim-surround'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'vim-scripts/EasyGrep'
+" Plugin 'int3/vim-taglist-plus'
+Plugin 'majutsushi/tagbar'
+Plugin 'CSSMinister' 
+Plugin 'scrooloose/syntastic' 
+" Plugin "mileszs/ack.vim"
+Plugin 'rking/ag.vim'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Raimondi/delimitMate'
+Plugin '29decibel/vim-stringify'
+Plugin 'vim-scripts/PreserveNoEOL'
 
-" Bundle "bling/vim-airline"
+call vundle#end() 
 
 if has('win32')
     source $VIMRUNTIME/mswin.vim
