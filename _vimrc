@@ -1,18 +1,20 @@
 " don't try to play nice with vi
 set nocompatible
 
+set background=light
+
 set grepprg=ag\ --nogroup\ --column
 "EasyGrep options
 let g:EasyGrepRecursive = 1
 let g:EasyGrepCommand = 1
 
 " vundle setup
-filetype off
-if has('win32')
-   set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-else
-   set rtp+=$HOME/.vim/vimfiles/bundle/Vundle.vim/
-endif
+ filetype off
+ if has('win32')
+    set rtp+=$HOME/.vim/bundle/Vundle.vim/
+ else
+    set rtp+=$HOME/.vim/bundle/Vundle.vim/
+ endif
 
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
@@ -46,8 +48,8 @@ Plugin 'vim-scripts/tComment'
 Plugin 'vim-scripts/L9'
 " Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'kien/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 'walm/jshint.vim'
+" Plugin 'JazzCore/ctrlp-cmatcher'
+" Plugin 'walm/jshint.vim'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-surround'
@@ -59,12 +61,15 @@ Plugin 'CSSMinister'
 Plugin 'scrooloose/syntastic' 
 " Plugin "mileszs/ack.vim"
 Plugin 'rking/ag.vim'
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Raimondi/delimitMate'
 Plugin '29decibel/vim-stringify'
 Plugin 'vim-scripts/PreserveNoEOL'
+Plugin 'tpope/vim-repeat'
+Plugin 'mxw/vim-jsx'
+Plugin 'ervandew/supertab'
 
 call vundle#end() 
 
@@ -93,8 +98,8 @@ set ignorecase  "case insensitive search
 
 
 "indent settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 	
@@ -127,7 +132,7 @@ let g:ctrlp_use_caching = 0
 
 
 " use the c matcher plugin
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:100'
 let g:ctrlp_custom_ignore = 'node_modules\|.git'
@@ -163,8 +168,11 @@ nnoremap <Leader>h :JSHint<CR>
 nnoremap 0 ^ 
 nnoremap ^ 0 
 set autoread
-let g:agprg="ag -i -Q --column"
+let g:ag_prg="ag -i -Q --column"
 
+
+" linting
+let g:syntastic_javascript_checkers = ['eslint']
 
 autocmd FileType html :PreserveNoEOL
 
