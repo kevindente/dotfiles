@@ -73,6 +73,8 @@ Plugin 'ervandew/supertab'
 
 call vundle#end() 
 
+call camelcasemotion#CreateMotionMappings(',')
+
 if has('win32')
     source $VIMRUNTIME/mswin.vim
 endif
