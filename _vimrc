@@ -68,8 +68,10 @@ Plugin 'Raimondi/delimitMate'
 Plugin '29decibel/vim-stringify'
 Plugin 'vim-scripts/PreserveNoEOL'
 Plugin 'tpope/vim-repeat'
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'ervandew/supertab'
+Plugin 'dyng/ctrlsf.vim'
 
 call vundle#end() 
 

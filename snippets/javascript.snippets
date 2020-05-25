@@ -75,8 +75,12 @@ snippet forEach
 		${2}
 	});
 
+
 snippet clog
 	console.log(${1});
+
+snippet objlog
+	console.log(require('util').inspect(${1}, {showHidden: false, depth: null}))
 
 
 snippet clogs
